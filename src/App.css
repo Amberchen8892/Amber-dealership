@@ -1,22 +1,119 @@
-.App {
+body{
+  width: 100vw;
+  height:100vh;
+  
+}
+/* test */
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  /* z-index: 0; */
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+
+.boxes {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: black;
+  color:white;
   text-align: center;
+  padding: 1.5rem 2rem;
+} 
+.footer{
+  background-color:  grey;
+}
+.top-menu{
+  height: 50px;
+  overflow: hidden;
+  background-color: rgb(17, 16, 16);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+z-index: 1000;
 }
 
-.App-logo {
-  height: 40vmin;
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+@media screen and (min-width:961px){
+  #content-desktop {display: block;}
+#content-mobile {display: none;}
+  
+}
+/* test */
+.open-hour{
+  width:100%;
+  height: 80px;
+  background-color: white
+}
+@media screen and (max-width: 768px) {
+
+  #contentdesktop {display: none;}
+  #contentmobile {display: block;}
+  
+  }
+  @media screen and (min-width:961px){
+    #contentdesktop {display: block;}
+  #contentmobile {display: none;}
+    
+  }
+.sectiona{
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./section.jpg');
+  background-position: 50% 50%;
+  width: 100%;
+  max-height: auto;
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+.boxs {
+  background: rgb(31, 30, 30, 0.5);
+  color:white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  border: 0.5px solid white
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
+  
